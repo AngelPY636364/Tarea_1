@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes y Galería - Angel Yépez</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="exercise-page">
+        <a href="index.html" class="back-link">← Volver al inicio</a>
+        
+        <div class="content-card" style="max-width: 1200px;">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h1>Galería de Pasatiempos</h1>
+                <p style="font-size: 1.125rem; color: #64748b;">Haz clic en cualquier imagen para verla en grande</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop&crop=center')">
+                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=200&fit=crop&crop=center" alt="Lectura - Mi pasatiempo favorito" class="gallery-img">
+                    <div class="gallery-info">
+                        <h3 class="gallery-title">Lectura</h3>
+                        <p class="gallery-subtitle">Click para ampliar</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=600&fit=crop&crop=center')">
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=300&h=200&fit=crop&crop=center" alt="Fútbol - Deporte que practico" class="gallery-img">
+                    <div class="gallery-info">
+                        <h3 class="gallery-title">Fútbol</h3>
+                        <p class="gallery-subtitle">Click para ampliar</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center')">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop&crop=center" alt="Música - Mi inspiración diaria" class="gallery-img">
+                    <div class="gallery-info">
+                        <h3 class="gallery-title">Música</h3>
+                        <p class="gallery-subtitle">Click para ampliar</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop&crop=center')">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=200&fit=crop&crop=center" alt="Programación - Mi pasión" class="gallery-img">
+                    <div class="gallery-info">
+                        <h3 class="gallery-title">Programación</h3>
+                        <p class="gallery-subtitle">Click para ampliar</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=600&fit=crop&crop=center')">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=300&h=200&fit=crop&crop=center" alt="Viajes - Explorando el mundo" class="gallery-img">
+                    <div class="gallery-info">
+                        <h3 class="gallery-title">Viajes</h3>
+                        <p class="gallery-subtitle">Click para ampliar</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&h=600&fit=crop&crop=center')">
+                    <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=300&h=200&fit=crop&crop=center" alt="Fotografía - Capturando momentos" class="gallery-img">
+                    <div class="gallery-info">
+                        <h3 class="gallery-title">Fotografía</h3>
+                        <p class="gallery-subtitle">Click para ampliar</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background: white; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); padding: 2rem; margin-top: 2rem;">
+                <h2 style="color: #1e293b; margin-bottom: 1rem;">Sobre mis Pasatiempos</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; color: #374151;">
+                    <div>
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Actividades Creativas</h3>
+                        <p>
+                            La lectura y la música son mis principales fuentes de inspiración. Me ayudan a desarrollar creatividad
+                            que luego aplico en mis proyectos de programación.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Actividades Físicas</h3>
+                        <p>
+                            El fútbol me mantiene activo y me enseña sobre trabajo en equipo, habilidades que son muy valiosas en el
+                            desarrollo de software.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <img id="modalImage" class="modal-img" src="/placeholder.svg" alt="Imagen ampliada">
+        </div>
+    </div>
+    
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            
+            modal.classList.add('active');
+            modalImg.src = imageSrc;
+            
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside the image
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

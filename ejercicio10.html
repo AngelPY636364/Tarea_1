@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Completa - Angel Yépez</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="complete-page">
+        <!-- Header -->
+        <header class="header-complete">
+            <div class="header-content">
+                <div class="logo-section">
+                    <a href="index.html" style="color: #a7f3d0; text-decoration: none; font-weight: 600;">← Inicio</a>
+                 
+                </div>
+                
+                <nav class="nav-complete">
+                    <a href="#inicio" onclick="scrollToSection('inicio')">Inicio</a>
+                    <a href="#biografia" onclick="scrollToSection('biografia')">Biografía</a>
+                    <a href="#habilidades" onclick="scrollToSection('habilidades')">Habilidades</a>
+                    <a href="#proyectos" onclick="scrollToSection('proyectos')">Proyectos</a>
+                    <a href="#contacto" onclick="scrollToSection('contacto')">Contacto</a>
+                </nav>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <section id="inicio" class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Angel Yépez</h1>
+                    <p class="hero-subtitle">Desarrollador Web Full Stack</p>
+                    <p class="hero-description">
+                        Apasionado por crear experiencias digitales excepcionales que combinan diseño atractivo con
+                        funcionalidad robusta.
+                    </p>
+                    <a href="#contacto" class="hero-btn" onclick="scrollToSection('contacto')">Contáctame</a>
+                </div>
+            </section>
+            
+            <!-- Biography Section -->
+            <section id="biografia" class="section-complete">
+                <div class="section-content">
+                    <h2 class="section-title">Mi Historia</h2>
+                    <div class="bio-grid">
+                        <div>
+                            <img src="images/profile.jpg" alt="Angel Yépez - Desarrollador Web" class="bio-img" style="border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+                        </div>
+                        <div>
+                            <p style="font-size: 1.125rem; color: #374151; margin-bottom: 1rem;">
+                                Soy Angel Yépez, un desarrollador web con una pasión inquebrantable por la tecnología y la
+                                innovación. Mi journey comenzó con una simple curiosidad sobre cómo funcionan las páginas web.
+                            </p>
+                            <p style="font-size: 1.125rem; color: #374151; margin-bottom: 1rem;">
+                                A lo largo de mi carrera, he desarrollado habilidades en múltiples tecnologías y frameworks, siempre
+                                manteniéndome actualizado con las últimas tendencias del desarrollo web.
+                            </p>
+                            <p style="font-size: 1.125rem; color: #374151;">
+                                Cuando no estoy programando, disfruto de la lectura, el fútbol y la música, actividades que me
+                                ayudan a mantener un equilibrio y me inspiran en mis proyectos creativos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Skills Section -->
+            <section id="habilidades" class="section-complete" style="background-color: #f8fafc;">
+                <div class="section-content">
+                    <h2 class="section-title">Habilidades</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <h3 style="font-size: 1.25rem; font-weight: 600; color: #1e293b; margin-bottom: 1rem;">Frontend</h3>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">HTML/CSS</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-card">
+                            <h3 style="font-size: 1.25rem; font-weight: 600; color: #1e293b; margin-bottom: 1rem;">Backend & Tools</h3>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Git</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Database</span>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Projects Section -->
+            <section id="proyectos" class="section-complete">
+                <div class="section-content">
+                    <h2 class="section-title">Proyectos Destacados</h2>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop&crop=center" alt="Dashboard Analytics" class="project-img">
+                            <div class="project-info">
+                                <h3 class="project-title">Dashboard Analytics</h3>
+                                <p class="project-description">
+                                    Sistema de análisis de datos con visualizaciones interactivas y reportes en tiempo real.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="project-tag">React</span>
+                                    <span class="project-tag">D3.js</span>
+                                    <span class="project-tag">Node.js</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop&crop=center" alt="E-commerce Platform" class="project-img">
+                            <div class="project-info">
+                                <h3 class="project-title">E-commerce Platform</h3>
+                                <p class="project-description">
+                                    Plataforma de comercio electrónico completa con carrito de compras y sistema de pagos.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="project-tag">JavaScript</span>
+                                    <span class="project-tag">MongoDB</span>
+                                    <span class="project-tag">Express</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&crop=center" alt="Task Management App" class="project-img">
+                            <div class="project-info">
+                                <h3 class="project-title">Task Management App</h3>
+                                <p class="project-description">
+                                    Aplicación de gestión de tareas con colaboración en tiempo real y notificaciones.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="project-tag">Vue.js</span>
+                                    <span class="project-tag">Socket.io</span>
+                                    <span class="project-tag">PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Sidebar -->
+        <aside style="position: fixed; right: 1rem; top: 50%; transform: translateY(-50%); z-index: 40; display: none;">
+            <div style="background: white; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                <button onclick="scrollToSection('inicio')" style="width: 12px; height: 12px; border-radius: 50%; background-color: #10b981; border: none; cursor: pointer;" title="Inicio"></button>
+                <button onclick="scrollToSection('biografia')" style="width: 12px; height: 12px; border-radius: 50%; background-color: #cbd5e1; border: none; cursor: pointer;" title="Biografía"></button>
+                <button onclick="scrollToSection('habilidades')" style="width: 12px; height: 12px; border-radius: 50%; background-color: #cbd5e1; border: none; cursor: pointer;" title="Habilidades"></button>
+                <button onclick="scrollToSection('proyectos')" style="width: 12px; height: 12px; border-radius: 50%; background-color: #cbd5e1; border: none; cursor: pointer;" title="Proyectos"></button>
+                <button onclick="scrollToSection('contacto')" style="width: 12px; height: 12px; border-radius: 50%; background-color: #cbd5e1; border: none; cursor: pointer;" title="Contacto"></button>
+            </div>
+        </aside>
+        
+        <!-- Footer -->
+        <footer id="contacto" class="footer-complete">
+            <div class="footer-content">
+                <h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 2rem; text-align: center;">Contacto</h2>
+                <div class="footer-grid">
+                    <div>
+                        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Información de Contacto</h3>
+                        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <span>angel.yepez100@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📱</span>
+                                <span>0988902331</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📍</span>
+                                <span>Quito, Ecuador</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Sígueme</h3>
+                        <div class="social-links">
+                            <a href="https://github.com" target="_blank" class="social-link-complete">GitHub</a>
+                            <a href="https://www.linkedin.com/in/angel-javier-y%C3%A9pez-chac%C3%B3n-2a75a6212/" target="_blank" class="social-link-complete">LinkedIn</a>
+                            <a href="https://twitter.com" target="_blank" class="social-link-complete">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>© 2025 Angel Yépez. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                
+                // Update active nav link
+                document.querySelectorAll('.nav-complete a').forEach(link => {
+                    link.style.color = 'white';
+                });
+                const targetLink = document.querySelector(`[onclick="scrollToSection('${sectionId}')"]`);
+                if (targetLink && targetLink.tagName === 'A') {
+                    targetLink.style.color = '#a7f3d0';
+                }
+            }
+        }
+        
+        // Show sidebar on larger screens
+        if (window.innerWidth >= 1024) {
+            document.querySelector('aside').style.display = 'block';
+        }
+        
+        // Update sidebar indicators on scroll
+        window.addEventListener('scroll', function() {
+            const sections = ['inicio', 'biografia', 'habilidades', 'proyectos', 'contacto'];
+            const sidebarButtons = document.querySelectorAll('aside button');
+            
+            sections.forEach((sectionId, index) => {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= 100 && rect.bottom >= 100) {
+                        sidebarButtons.forEach(btn => btn.style.backgroundColor = '#cbd5e1');
+                        if (sidebarButtons[index]) {
+                            sidebarButtons[index].style.backgroundColor = '#10b981';
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

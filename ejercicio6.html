@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Caja - Angel Yépez</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="exercise-page">
+        <a href="index.html" class="back-link">← Volver al inicio</a>
+        
+        <div class="content-card">
+            <div class="slider-container">
+                <h1 style="text-align: center; margin-bottom: 2rem;">Diseño de Caja con Slider</h1>
+                
+                <div class="slider" id="slider">
+                    <div class="slide slide-1 active">
+                        <div>
+                            <h2>Desarrollo Web</h2>
+                            <p>Creando experiencias digitales únicas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide slide-2">
+                        <div>
+                            <h2>Diseño Responsivo</h2>
+                            <p>Adaptable a cualquier dispositivo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide slide-3">
+                        <div>
+                            <h2>Innovación</h2>
+                            <p>Siempre buscando nuevas soluciones</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-indicators">
+                        <span class="indicator active" onclick="currentSlide(1)"></span>
+                        <span class="indicator" onclick="currentSlide(2)"></span>
+                        <span class="indicator" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn" onclick="previousSlide()">Anterior</button>
+                    <button class="slider-btn" onclick="nextSlide()">Siguiente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let slideIndex = 1;
+        let slideInterval;
+        
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            const indicators = document.querySelectorAll('.indicator');
+            
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            slides[slideIndex - 1].classList.add('active');
+            indicators[slideIndex - 1].classList.add('active');
+        }
+        
+        function nextSlide() {
+            slideIndex++;
+            showSlide(slideIndex);
+        }
+        
+        function previousSlide() {
+            slideIndex--;
+            showSlide(slideIndex);
+        }
+        
+        function currentSlide(n) {
+            slideIndex = n;
+            showSlide(slideIndex);
+        }
+        
+        function startSlideShow() {
+            slideInterval = setInterval(nextSlide, 3000);
+        }
+        
+        function stopSlideShow() {
+            clearInterval(slideInterval);
+        }
+        
+        // Iniciar slideshow automático
+        startSlideShow();
+        
+        // Pausar en hover
+        const slider = document.getElementById('slider');
+        slider.addEventListener('mouseenter', stopSlideShow);
+        slider.addEventListener('mouseleave', startSlideShow);
+    </script>
+</body>
+</html>
